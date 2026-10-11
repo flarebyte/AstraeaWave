@@ -1,5 +1,8 @@
 # Selective source retrieval
 
+AI coding agents: start with [AGENTS.md](AGENTS.md) for task-to-concept routing
+and a workflow that retrieves only the relevant design records and code.
+
 `examples/concepts.csv` is the canonical concept registry. Each stable lowercase
 dot-separated `id` names a semantic group, with a concise description and an
 empty parent for roots or the immediate registered parent for children. Reuse
