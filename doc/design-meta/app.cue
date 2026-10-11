@@ -9,6 +9,12 @@ reports: [{
 	filepath:    "../design/design.md"
 	description: "Proposed specification assembled from the CSV sources in doc/design-meta/examples; open questions and recommended defaults remain subject to implementation decisions."
 	sections: [{
+		title: "00 Source Navigation"
+		sections: [{
+			title: "Concept Registry and Search Convention"
+			notes: ["design.concepts", "design.search"]
+		}]
+	}, {
 		title: "01 Functional and Technical Specification"
 		sections: [{
 			title: "Features, Scope, and Open Questions"
@@ -36,6 +42,17 @@ reports: [{
 }]
 
 notes: [{
+	name:      "design.concepts"
+	title:     "Canonical Concept Registry"
+	filepath:  "examples/concepts.csv"
+	arguments: ["format-csv=table"]
+	labels: ["concept", "csv"]
+}, {
+	name:     "design.search"
+	title:    "Selective Source Retrieval"
+	markdown: "Use the canonical registry to select a primary concept, then search its quoted value across the source catalogs. See the [source search convention](../design-meta/README.md) for rg and grep commands, secondary-topic retrieval, CSV editing rules, and validated regeneration."
+	labels: ["documentation", "search"]
+}, {
 	name:      "design.cli"
 	title:     "CLI Command Catalog"
 	filepath:  "examples/cli-command.csv"

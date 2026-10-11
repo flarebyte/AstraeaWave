@@ -7,11 +7,12 @@ The [design specification](doc/design/design.md) is generated from the CSV catal
 in [doc/design-meta/examples](doc/design-meta/examples). Edit these source files to
 evolve the specification; [app.cue](doc/design-meta/app.cue) assembles the report.
 
-With `flyb` installed, regenerate from the repository root:
+See the [source search convention](doc/design-meta/README.md) for concept-based
+`rg` retrieval and CSV editing rules. With Python 3 and `flyb` installed,
+validate the catalogs and regenerate from the repository root:
 
 ```sh
-flyb validate --config doc/design-meta
-flyb generate markdown --config doc/design-meta
+sh scripts/generate_design.sh
 ```
 
 The design currently proposes Kotlin/JVM with GreenMail; the implementation
